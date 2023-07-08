@@ -1,0 +1,38 @@
+Time complexity: Amount of time needed to run relative to input size
+Space complexity: Memory it takes relative to input size
+
+Typically people care more about time complexity.
+
+Complexity is defined by a function, e.g. O(n), O(n^2), O(2^n), O(log n), O(n x m)
+
+These functions describe how the amount of operations/memories needed by the algorithm grows as the arguments tend to infinity.
+Because the variables are tending to infinity, constants are always ignored: O(600n) = O(n) = O(n/500)
+
+We want to focus how the algorithm scales with the input size.
+
+This means that O(2^n + n^2 - 500n) = O(2^n) since 2^n dominates the two other terms.
+
+Examples:
+
+for(int num : arr){
+ print(num)
+}
+
+This algorithm has a time complexity of O(n). 1 print operation n times.
+
+for(int num : arr){
+
+  for(int i = 0; i < 500000; i++){
+	print(num)
+  }
+}
+
+This algorithm also has a time complexity of O(n) but is much slower than the first one.
+
+for(int num: arr){
+  for(int num2 : arr){
+    print(num * num2)
+  }
+}
+
+This algorithm has a time complexity of O(n^2)

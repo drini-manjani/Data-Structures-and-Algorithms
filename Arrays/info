@@ -1,0 +1,22 @@
+Arrays can be declared using: int scores [5] 
+This will be an array with 5 integers called scores.
+If we want to initialize we do: int scores [5] {1,2,3,4,5}
+Or we can do: int scores [] {1,2,3,4,5}
+To access the first element of an array we do: scores[0]
+To get the size of the arraz we do: std::size(scores)
+Be careful of the boundaries of the array. C++ can be funny and let you access memory outside of arrays.
+Technically an array cannot be resized. A dynamic array can be resized.
+In the context of algorithm problems, people refer to dynamic arrays wjen they use array.
+Ararys in C++ are mutable. In Java and Python they are immutable.(Mutable: a type of data that can not be changed)
+
+Complexity of data structures:
+
+Operation                 Array/List    Immutable
+
+Appending to end-------------O(1)-----------O(n)
+Popping from end-------------O(1)-----------O(n)
+Insertion, not from end------O(n)-----------O(n)
+Deletion, not from end-------O(n)-----------O(n)
+Modifying an element---------O(1)-----------O(n)
+Random access----------------O(1)-----------O(n)
+Checking if element exists---O(n)-----------O(n)
